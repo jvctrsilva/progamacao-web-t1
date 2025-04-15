@@ -1,0 +1,83 @@
+body {
+    background-color: #800000;
+    margin: 30px;
+}
+
+.container{
+    display: flex;
+    block-size: 200px;
+    background-color: #800000;
+    inline-size: auto;
+
+}
+  .blockleft{
+    width: 40%;
+    margin-left: 300px;
+    margin-right: 100px;
+    margin-top: 10px;
+    margin-bottom: 60px;
+    background-color: #fff;
+    border-radius: 20px;
+  }
+
+  .blockright {
+    width: 20%;
+    margin-left: 300px;
+    margin-right: 40px;
+    background-color: 800000;
+
+  }
+  .blockright button {
+    width: 100%;
+    max-width: 240px;
+    padding-bottom: 30px;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 5px;
+    min-height: 40px;
+    max-height: 30px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 1000px;
+    border-color: gray;
+    border-style: outset;
+    border-width: 5px;
+    transition: background-color 0.3s ease;
+    font-family: "Audiowide", sans-serif;
+  }
+  .title{
+    font-family: "Audiowide", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+  }
+  .subtitle{
+    font-family: "Trirong", serif;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+  }
+  .text{
+    font-family: "Trirong", serif;
+    text-align: center;
+    font-size: 20px;
+    color: brown;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }	
+
+  ol {
+    font-family: "Trirong", serif;
+    text-align: center;
+    font-size: 20px;
+    color: brown;
+  }
+
+
