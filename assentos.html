@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CineGraxa</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+        <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../assets/img/baiacu.png" alt="Logo CineGraxa">
+            </div>
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/combos.html">Combos</a></li>
+                <li><a href="/assentos.html" class="selected">Assentos</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <h2>Escolha seus assentos</h2>
+        <div class="screen">TELA</div>
+
+        <div class="seats-container" id="seats">
+            <!-- Assentos gerados via JS -->
+        </div>
+
+        <div class="legend">
+            <div><div class="box available"></div> <a>Disponível</a></div>
+            <div><div class="box selected-seat"></div> <a>Selecionado</a></div>
+            <div><div class="box occupied"></div> <a>Ocupado</a></div>
+        </div>
+        <button class="btn" id="buyButton">Confirmar compra</button>
+    </div>
+
+<script>
+    const container = document.getElementById('seats');
+    const buyButton = document.getElementById('buyButton');
+    const rows = 6;
+    const cols = 10;
+    const totalSeats = rows * cols;
+    const STORAGE_KEY = 'occupiedSeats';
+
+    let occupiedSeats = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+
+    const getSeatLabel = (i) => {
+        const rowLetter = String.fromCharCode(65 + Math.floor(i / cols)); // 65 = 'A'
+        const colNumber = (i % cols) + 1;
+        return `${rowLetter}${colNumber}`;
+    };
+
+    for (let i = 0; i < totalSeats; i++) {
+        const seat = document.createElement('div');
+        seat.classList.add('seat');
+        seat.dataset.index = i;
+
+        const label = document.createElement('span');
+        label.classList.add('seat-label');
+        label.textContent = getSeatLabel(i);
+        seat.appendChild(label);
+
+        if (occupiedSeats.includes(i)) {
+            seat.classList.add('occupied');
+        }
+
+        seat.addEventListener('click', () => {
+            if (seat.classList.contains('occupied')) return;
+            seat.classList.toggle('selected-seat');
+        });
+
+        container.appendChild(seat);
+    }
+
+    buyButton.addEventListener('click', () => {
+        const selectedSeats = document.querySelectorAll('.seat.selected-seat');
+        selectedSeats.forEach(seat => {
+            const index = parseInt(seat.dataset.index);
+            if (!occupiedSeats.includes(index)) {
+                occupiedSeats.push(index);
+                seat.classList.remove('selected-seat');
+                seat.classList.add('occupied');
+            }
+        });
+
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(occupiedSeats));
+    });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineGraxa - Combos</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../assets/img/baiacu.png" alt="Logo CineGraxa">
+            </div>
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="#" class="selected">Combos</a></li>
+                <li><a href="/assentos.html">Assentos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Escolha seu combo</h2>
+        <div class="combos-container">
+            <!-- Combos gerados via JS -->
+        </div>
+    </div>
+
+    <script src="../assets/js/combos.js"></script>
+    <script>
+        const combos = [
+            {
+                name: 'Combo A Hora Delas',
+            description: `
+                1 Balde de Pipoca Aves de Rapina  
+                Produto exclusivo do filme Aves de Rapina, garanta já seu balde de pipoca no formato de marreta da personagem Alerquina.  
+                - Material: Plástico.  
+                - Pipoca não inclusa.  
+
+                1 Balde de Pipoca Malévola  
+                Produto exclusivo do filme Malévola 2, garanta já seu balde de pipoca com asas em alto relevo.  
+                - Material: Plástico.  
+                - Pipoca não inclusa.  
+
+                1 Copo Mulan  
+                Produto exclusivo do filme Mulan, garanta já seu copo no formato de uma espada, 500ml.  
+                - Bebida não inclusa.
+            `,
+                price: 20.00,
+                image: '../assets/img/combos/35418X_500x500_1-300x300.jpg'
+            },
+            {
+                name: 'Combo Autocracia',
+                description: `
+                    1 Balde de Pipoca Star Wars Primeira Ordem
+                    Produto exclusivo do filme Star Wars, garanta já seu balde de pipoca.
+                    - Material: Plástico.
+
+                    2 Copos Star Wars Primeira Ordem
+                    Produto exclusivo do filme Star Wars, garanta já seu copo.
+                    - Material: Plástico.
+                `,
+                price: 30.00,
+                image: '../assets/img/combos/35421X_500x500_1-300x300.jpg'
+            },
+            {
+                name: 'Combo Sabre de Luz',
+                description: `
+                    1 Copo Star Wars Jedi
+                    Produto exclusivo do filme Star Wars, garanta já seu copo.
+                    - Material: Plástico.
+
+                    1 Copo Star Wars Primeira Ordem
+                    Produto exclusivo do filme Star Wars, garanta já seu copo.
+                    - Material: Plástico.
+                `,
+                price: 40.00,
+                image: '../assets/img/combos/35422X_500x500_1-300x300.jpg'
+            }
+        ];
+
+        const combosContainer = document.querySelector('.combos-container');
+
+        combos.forEach(combo => {
+            const comboDiv = document.createElement('div');
+            comboDiv.classList.add('combo');
+            comboDiv.innerHTML = `
+                <img src="${combo.image}" alt="${combo.name}">
+                <h3>${combo.name}</h3>
+                <p>${combo.description}</p>
+                <p class="price">R$ ${combo.price.toFixed(2)}</p>
+                <button class="btn buy-combo" data-name="${combo.name}" data-price="${combo.price}">Comprar</button>
+            `;
+            combosContainer.appendChild(comboDiv);
+        });
+        const buyButtons = document.querySelectorAll('.buy-combo');
+
+    </script>
+</body>
+</html>

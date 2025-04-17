@@ -16,9 +16,9 @@
                 <img src="../assets/img/baiacu.png" alt="Logo CineGraxa">
             </div>
             <ul class="nav-links">
-                <li><a href="#" class="selected">Home</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="/index.html" class="selected">Home</a></li>
+                <li><a href="/combos.html">Combos</a></li>
+                <li><a href="/assentos.html">Assentos</a></li>
             </ul>
         </nav>
     </header>
@@ -33,22 +33,81 @@
             <h2>Filmes em Cartaz</h2>
             <div class="movies">
                 <div class="movie">
-                    <img src="../assets/img/minecraft.jpeg" alt="Filme 1">
-                    <h3>Filme 1</h3>
-                    <p>Descrição breve do filme 1.</p>
+                
+                    <div class="image-container">
+                        <p class="classification-12">12</p>
+                        <img src="../assets/img/minecraft.jpeg" alt="Um Filme Minecraft">
+                        <button class="movie-btn watchMovie" data-title="Um Filme Minecraft – 3D">Assistir</button>
+                    </div>
+                    <h3>Um Filme Minecraft – 3D</h3>
+                    <p class="subtitle">Ação • 101 min.</p>
                 </div>
                 <div class="movie">
-                    <img src="../assets/img/branca-de-neve.jpeg" alt="Filme 2">
-                    <h3>Filme 2</h3>
-                    <p>Descrição breve do filme 2.</p>
+                    <div class="image-container">
+                        <p class="classification-12">12</p>
+                        <img src="../assets/img/branca-de-neve.jpeg" alt="Branca de Neve">
+                        <button class="movie-btn watchMovie" data-title="Branca de Neve – 2D">Assistir</button>
+                    </div>
+                    <h3>BRANCA DE NEVE – 2D</h3>
+                    <p class="subtitle">Aventura • 109 min</p>
                 </div>
                 <div class="movie">
-                    <img src="../assets/img/the-chosen.jpeg" alt="Filme 3">
-                    <h3>Filme 3</h3>
-                    <p>Descrição breve do filme 3.</p>
+                    <div class="image-container">
+                        <p class="classification-16">16</p>
+                        <img src="../assets/img/the-chosen.jpeg" alt="The Chosen - A Última Ceia">
+                        <button class="movie-btn watchMovie" data-title="The Chosen – A Última Ceia">Assistir</button>
+                    </div>
+                    <h3>THE CHOSEN – A ÚLTIMA CEIA</h3>
+                    <p class="subtitle">Religioso • 125 min</p>
+                </div>
+            </div>
+            <div class="movies">
+                <div class="movie">
+                
+                    <div class="image-container">
+                        <p class="classification-14">14</p>
+                        <img src="../assets/img/vinganca.jpeg" alt="Operação Vingança">
+                        <button class="movie-btn watchMovie" data-title="Operação Vingança – 2D">Assistir</button>
+                    </div>
+                    <h3>OPERAÇÃO VINGANÇA – 2D</h3>
+                    <p class="subtitle">Terror • 123 min.</p>
+                </div>
+                <div class="movie">
+                    <div class="image-container">
+                        <p class="classification-16">12</p>
+                        <img src="../assets/img/presenca.jpeg" alt="Presença">
+                        <button class="movie-btn watchMovie" data-title="Presença – 2D">Assistir</button>
+                    </div>
+                    <h3>PRESENÇA – 2D</h3>
+                    <p class="subtitle">Suspense • 89 min</p>
+                </div>
+                <div class="movie">
+                    <div class="image-container">
+                        <p class="classification-16">16</p>
+                        <img src="../assets/img/codigo-alarum.jpeg" alt="Código Alarum">
+                        <button class="movie-btn watchMovie" data-title="Código Alarum – 2D">Assistir</button>
+                    </div>
+                    <h3>CÓDIGO ALARUM - 2D</h3>
+                    <p class="subtitle">Ação • 95 min</p>
                 </div>
             </div>
         </section>
     </div>
+    <script>
+        const buttons = document.querySelectorAll('.watchMovie');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                const movieTitle = this.getAttribute('data-title');
+
+                // Salvar no localStorage
+                localStorage.setItem('filmeSelecionado', movieTitle);
+
+                // Redirecionar para a página de assentos
+                window.location.href = 'assentos.html';
+            });
+        });
+    </script>
 </body>
 </html>
+
