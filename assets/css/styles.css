@@ -45,6 +45,7 @@ body {
     padding: 10px;
     border-radius: 10px;
 }
+
 .nav-links a:hover {
     color: #fff;
     border-radius: 10px;
@@ -52,8 +53,8 @@ body {
 }
 
 .selected {
-  background-color: #343434 !important;
-  color: white !important;
+    background-color: #343434 !important;
+    color: white !important;
 }
 
 .container {
@@ -100,10 +101,26 @@ h2 {
     color: #fff;
 }
 
+.combos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.combo {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 40px;
+    width: 400px;
+    text-align: center;
+    color: #fff;
+}
+
 .image-container {
     position: relative;
     width: 100%;
-   
+
 }
 
 .image-container img {
@@ -207,7 +224,7 @@ h2 {
     font-weight: bold;
 }
 
-.seats-container {
+.assentos-container {
     display: grid;
     grid-template-columns: repeat(10, 40px);
     gap: 10px;
@@ -280,31 +297,39 @@ h2 {
 .box.occupied {
     background-color: #e50914;
 }
-#buyButton {
-    width: 100%;
-    height: 50%;
-    min-height: 1;
+
+#assentosBotao {
     background-color: #e50914;
     color: white;
-    padding: 10px 20px;
+    padding: 15px 30px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     font-weight: bold;
+    font-size: 1.1em;
     cursor: pointer;
+    display: block;
+    margin: 30px auto 0 auto;
+    max-width: 300px;
+    text-align: center;
     transition: background-color 0.3s ease;
+}
 
+#assentosBotao:hover {
+    background-color: #c40812;
 }
 
 .modal {
     display: none;
     position: fixed;
     z-index: 999;
-    left: 0; top: 0;
-    width: 100%; height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
-  }
-  
-  .modal-content {
+}
+
+.modal-content {
     background-color: #222;
     color: white;
     margin: 10% auto;
@@ -313,13 +338,13 @@ h2 {
     max-width: 500px;
     border-radius: 10px;
     position: relative;
-  }
-  
-  .modal-content h2 {
+}
+
+.modal-content h2 {
     margin-top: 0;
-  }
-  
-  .close {
+}
+
+.close {
     position: absolute;
     top: 15px;
     right: 20px;
@@ -327,13 +352,13 @@ h2 {
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
-  }
-  
-  .schedule {
+}
+
+.schedule {
     margin-top: 20px;
-  }
-  
-  .schedule-btn {
+}
+
+.schedule-btn {
     background-color: #e50914;
     color: white;
     padding: 10px 20px;
@@ -345,17 +370,17 @@ h2 {
     transition: background-color 0.3s ease;
     width: 100%;
     text-align: left;
-  }
-  
-  .schedule-btn:hover {
+}
+
+.schedule-btn:hover {
     background-color: #c40611;
-  }
-  
-  .schedule-btn:focus {
+}
+
+.schedule-btn:focus {
     outline: none;
-  }
-  
-  footer {
+}
+
+footer {
     background-color: #000;
     color: #fff;
     text-align: center;
@@ -363,4 +388,20 @@ h2 {
     position: relative;
     bottom: 0;
     width: 100%;
-  }
+}
+
+.combo p {
+    font-size: 1em;
+    line-height: 1.5em;
+    text-align: left;
+    line-height: 1.5em;
+    text-align: left;
+}
+
+.price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #e50914;
+    margin-top: 10px;
+    text-align: center;
+}
