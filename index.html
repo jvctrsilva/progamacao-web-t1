@@ -12,9 +12,6 @@
 <body>
     <header>
         <nav class="navbar">
-            <div class="logo">
-                <img src="../assets/img/baiacu.png" alt="Logo CineGraxa">
-            </div>
             <ul class="nav-links">
                 <li><a href="/index.html" class="selected">Home</a></li>
                 <li><a href="/combos.html">Combos</a></li>
@@ -24,11 +21,6 @@
     </header>
     
     <div class="container">
-        <div class="content">
-            <h1>Bem-vindo ao CineGraxa</h1>
-            <iframe width="1500" height="715" src="https://www.youtube.com/embed/EVKYAAES6JQ?si=-fq6REpr6o1ij4vA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-    
         <section class="movie-catalog">
             <h2>Filmes em Cartaz</h2>
             <div class="movies">
@@ -37,7 +29,10 @@
                     <div class="image-container">
                         <p class="classification-12">12</p>
                         <img src="../assets/img/minecraft.jpeg" alt="Um Filme Minecraft">
-                        <button class="movie-btn watchMovie" data-title="Um Filme Minecraft – 3D">Assistir</button>
+                        <button class="movie-btn watchMovie" data-title="Um Filme Minecraft – 3D"
+                        onclick="openModal('Um Filme Minecraft', 
+                        'Um Filme Minecraft é uma aventura de comédia e fantasia que conta a história de quatro jovens que são transportados para um mundo cúbico e bizarro. Lá, eles embarcam em uma jornada para voltar para casa com a ajuda de um construtor experiente.')"
+                        >Assistir</button>
                     </div>
                     <h3>Um Filme Minecraft – 3D</h3>
                     <p class="subtitle">Ação • 101 min.</p>
@@ -46,7 +41,10 @@
                     <div class="image-container">
                         <p class="classification-12">12</p>
                         <img src="../assets/img/branca-de-neve.jpeg" alt="Branca de Neve">
-                        <button class="movie-btn watchMovie" data-title="Branca de Neve – 2D">Assistir</button>
+                        <button class="movie-btn watchMovie" data-title="Um Filme Minecraft – 3D"
+                        onclick="openModal('Branca de Neve', 
+                        'Nesta releitura da história atemporal, a encantadora Branca de Neve (Rachel Zegler) é ameaçada e precisa fugir de seu reino. Após percorrer a floresta encantada, ela encontra uma cabana onde vivem os amigáveis Dengoso, Mestre, Dunga, Zangado, Feliz, Soneca e Atchim, com quem ela passa a viver.')"
+                        >Assistir</button>
                     </div>
                     <h3>BRANCA DE NEVE – 2D</h3>
                     <p class="subtitle">Aventura • 109 min</p>
@@ -55,7 +53,10 @@
                     <div class="image-container">
                         <p class="classification-16">16</p>
                         <img src="../assets/img/the-chosen.jpeg" alt="The Chosen - A Última Ceia">
-                        <button class="movie-btn watchMovie" data-title="The Chosen – A Última Ceia">Assistir</button>
+                        <button class="movie-btn watchMovie" data-title="Um Filme Minecraft – 3D"
+                        onclick="openModal('Branca de Neve', 
+                        'Nesta releitura da história atemporal, a encantadora Branca de Neve (Rachel Zegler) é ameaçada e precisa fugir de seu reino. Após percorrer a floresta encantada, ela encontra uma cabana onde vivem os amigáveis Dengoso, Mestre, Dunga, Zangado, Feliz, Soneca e Atchim, com quem ela passa a viver.')"
+                        >Assistir</button>
                     </div>
                     <h3>THE CHOSEN – A ÚLTIMA CEIA</h3>
                     <p class="subtitle">Religioso • 125 min</p>
@@ -63,11 +64,13 @@
             </div>
             <div class="movies">
                 <div class="movie">
-                
                     <div class="image-container">
                         <p class="classification-14">14</p>
                         <img src="../assets/img/vinganca.jpeg" alt="Operação Vingança">
-                        <button class="movie-btn watchMovie" data-title="Operação Vingança – 2D">Assistir</button>
+                        <button class="movie-btn watchMovie" data-title="Branca de Neve – 2D"
+                        onclick="openModal('Branca de Neve', 
+                        'Nesta releitura da história atemporal, a encantadora Branca de Neve (Rachel Zegler) é ameaçada e precisa fugir de seu reino. Após percorrer a floresta encantada, ela encontra uma cabana onde vivem os amigáveis Dengoso, Mestre, Dunga, Zangado, Feliz, Soneca e Atchim, com quem ela passa a viver.')"
+                        >Assistir</button>
                     </div>
                     <h3>OPERAÇÃO VINGANÇA – 2D</h3>
                     <p class="subtitle">Terror • 123 min.</p>
@@ -76,7 +79,10 @@
                     <div class="image-container">
                         <p class="classification-16">12</p>
                         <img src="../assets/img/presenca.jpeg" alt="Presença">
-                        <button class="movie-btn watchMovie" data-title="Presença – 2D">Assistir</button>
+                        <button class="movie-btn watchMovie" data-title="The Chosen - A Última Ceia"
+                        onclick="openModal('Branca de Neve', 
+                        'Jesus entra na cidade sagrada como rei, mas encontra a casa de Seu Pai transformada de um lugar de oração em um mercado corrupto. Enquanto o sumo sacerdote judeu trama contra o que seria Messias, Jesus age primeiro—dando uma reviravolta na corrupção religiosa.')"
+                        >Assistir</button>
                     </div>
                     <h3>PRESENÇA – 2D</h3>
                     <p class="subtitle">Suspense • 89 min</p>
@@ -85,7 +91,10 @@
                     <div class="image-container">
                         <p class="classification-16">16</p>
                         <img src="../assets/img/codigo-alarum.jpeg" alt="Código Alarum">
-                        <button class="movie-btn watchMovie" data-title="Código Alarum – 2D">Assistir</button>
+                        <button class="movie-btn watchMovie" data-title="Um Filme Minecraft – 3D"
+                        onclick="openModal('Branca de Neve', 
+                        'Nesta releitura da história atemporal, a encantadora Branca de Neve (Rachel Zegler) é ameaçada e precisa fugir de seu reino. Após percorrer a floresta encantada, ela encontra uma cabana onde vivem os amigáveis Dengoso, Mestre, Dunga, Zangado, Feliz, Soneca e Atchim, com quem ela passa a viver.')"
+                        >Assistir</button>
                     </div>
                     <h3>CÓDIGO ALARUM - 2D</h3>
                     <p class="subtitle">Ação • 95 min</p>
@@ -93,21 +102,22 @@
             </div>
         </section>
     </div>
-    <script>
-        const buttons = document.querySelectorAll('.watchMovie');
-
-        buttons.forEach(button => {
-            button.addEventListener('click', function() {
-                const movieTitle = this.getAttribute('data-title');
-
-                // Salvar no localStorage
-                localStorage.setItem('filmeSelecionado', movieTitle);
-
-                // Redirecionar para a página de assentos
-                window.location.href = 'assentos.html';
-            });
-        });
-    </script>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <h2 id="movie-title"></h2>
+          <p id="movie-description"></p>
+          <div class="schedule">
+            <h3>Horários:</h3>
+            <button class="schedule-btn" onclick="goToSeats('8:00 AM', 'Sala A')">8:00 AM - Sala A</button>
+            <button class="schedule-btn" onclick="goToSeats('9:30 AM', 'Sala B')">9:30 AM - Sala B</button>
+            <button class="schedule-btn" onclick="goToSeats('10:30 AM', 'Sala C')">10:30 AM - Sala C</button>
+          </div>
+        </div>
+      </div>
+    <footer>
+        <p>&copy; 2023 CineGraxa. Todos os direitos reservados.</p>       
+    <script src="assets/scripts/main.js"></script>
 </body>
 </html>
 

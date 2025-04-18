@@ -103,6 +103,7 @@ h2 {
 .image-container {
     position: relative;
     width: 100%;
+   
 }
 
 .image-container img {
@@ -280,29 +281,63 @@ h2 {
     background-color: #e50914;
 }
 
-.btn {
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .modal-content {
+    background-color: #222;
+    color: white;
+    margin: 10% auto;
+    padding: 30px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  .modal-content h2 {
+    margin-top: 0;
+  }
+  
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .schedule {
+    margin-top: 20px;
+  }
+  
+  .schedule-btn {
     background-color: #e50914;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     font-weight: bold;
+    margin: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    /* Posiciona no canto direito */
-    position: absolute;
-    right: 300px;
-    bottom: 200px;
-    z-index: 1;
-}
-
-/* ajustar seat posicionar o texto no centro da div */
-.seat {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.8em;
-    color: #fff;
-    font-weight: bold;
-    text-align: center;
-}
+    width: 100%;
+    text-align: left;
+  }
+  
+  .schedule-btn:hover {
+    background-color: #c40611;
+  }
+  
+  .schedule-btn:focus {
+    outline: none;
+  }
+  
