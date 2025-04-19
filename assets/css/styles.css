@@ -210,8 +210,6 @@ h2 {
     text-align: left;
 }
 
-/* Assentos */
-
 .screen {
     background-color: #ccc;
     height: 40px;
@@ -298,7 +296,7 @@ h2 {
     background-color: #e50914;
 }
 
-#assentosBotao {
+#confirmButton {
     background-color: #e50914;
     color: white;
     padding: 15px 30px;
@@ -314,9 +312,12 @@ h2 {
     transition: background-color 0.3s ease;
 }
 
-#assentosBotao:hover {
+#confirmButton:hover {
     background-color: #c40812;
 }
+
+
+
 
 .modal {
     display: none;
@@ -404,4 +405,47 @@ footer {
     color: #e50914;
     margin-top: 10px;
     text-align: center;
+}
+.combo-btn {
+    background-color: #e50914;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto 0 auto;
+    max-width: 300px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.combo-btn:hover {
+    background-color: #c40611;
+}
+
+.combo-btn:focus {
+    outline: none;
+}
+
+#buyButton {
+    background-color: #e50914;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto 0 auto;
+    max-width: 300px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+#buyButton:hover {
+    background-color: #c40812;
 }

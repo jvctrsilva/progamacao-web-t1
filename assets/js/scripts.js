@@ -40,9 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Seat selection logic for assentos.html
     const container = document.getElementById('assentos');
     if (container) {
-      const assentosBotao = document.getElementById('assentosBotao');
-      const linhas = 6;
-      const colunas = 10;
+      const assentosBotao = document.getElementById('confirmButton');
+      const linhas = 5;
+      const colunas = 8;
       const totalassentos = linhas * colunas;
       const STORAGE_KEY = 'sessoes';
   
@@ -74,9 +74,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }
   
       const getSeatLabel = (i) => {
-        const letraLinha = String.fromCharCode(65 + Math.floor(i / colunas)); // 65 = 'A'
+        const numeroLinha = Math.floor(i / colunas);
         const numeroColuna = (i % colunas) + 1;
-        return `${letraLinha}${numeroColuna}`;
+        return `${numeroLinha}${numeroColuna}`;
       };
   
       for (let i = 0; i < totalassentos; i++) {
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    const botoes = document.querySelectorAll('.comboBotao');
+    const botoes = document.querySelectorAll('.combo-btn');
 
     botoes.forEach(botao => {
         botao.addEventListener('click', () => {
@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
 
     // Finalizar compra
-    document.getElementById('finalizarCompra').addEventListener('click', () => {
+    document.getElementById('buyButton').addEventListener('click', () => {
       const compraFinal = {
         filme,
         sessao,
